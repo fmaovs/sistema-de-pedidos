@@ -6,7 +6,7 @@ from ..database import get_db
 router = APIRouter()
 
 @router.post("/pedido/", response_model=schemas.Pedido)
-def create_cliente(cliente: schemas.PedidoCreate, db: Session = Depends(get_db)):
+def create_pedido(pedido: schemas.PedidoCreate, db: Session = Depends(get_db)):
     return crud.create_pedido(db=db, pedido = pedido)
 
 @router.get("/pedido/{pedido_id}", response_model=schemas.Pedido)

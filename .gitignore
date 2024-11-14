@@ -4,7 +4,6 @@
 
 # Archivos de caché de Python
 __pycache__/
-__pycache__/*
 *.py[cod]
 *$py.class
 
@@ -18,5 +17,3 @@ Thumbs.db
 # Archivos de logs
 *.log
 
-# Migraciones de bases de datos (si estás usando migraciones locales)
-migrations/
