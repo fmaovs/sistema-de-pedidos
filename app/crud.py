@@ -11,5 +11,13 @@ def create_cliente(db: Session, cliente: schemas.ClienteCreate):
     db.commit()
     db.refresh(db_cliente)
     return db_cliente
-
 # Puedes crear funciones CRUD similares para Prenda y Pedido
+def get_prenda(db: Session, prenda_id: int):
+    return db.query(models.Prenda).filter(models.Prenda.id == prenda_id).first()
+
+def create_prenda(db: Session, prenda: schemas.PrendaCreate):
+    db_prenda = models.Prenda(**prenda.dict())
+    db.add(db_prenda)
+    db.commit()
+    db.refresh(db_prenda)
+    return db_prenda
