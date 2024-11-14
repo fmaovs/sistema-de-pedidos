@@ -1,1 +1,21 @@
-venv/
+# Archivos de configuración del entorno
+*.env
+*.env.*
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de caché y logs de IDEs y sistemas operativos
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Migraciones de bases de datos (si estás usando migraciones locales)
+migrations/
