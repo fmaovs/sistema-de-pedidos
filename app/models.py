@@ -1,7 +1,7 @@
 # app/models.py
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
-from .database import Base
+from app.database import Base
 
 class Cliente(Base):
     __tablename__ = "clientes"

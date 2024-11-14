@@ -1,4 +1,3 @@
-# app/routers/cliente.py
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from .. import crud, models, schemas
