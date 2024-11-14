@@ -34,12 +34,12 @@ def create_pedido(db: Session, pedido: schemas.PedidoCreate):
 
 
 def delete_pedido(db: Session, pedido_id: int):
-    db_pedido = get_cliente(db, pedido_id)
+    db_pedido = get_pedido(db, pedido_id)
     db.delete(db_pedido)
     db.commit()
     db.refresh(db_pedido)
     return db_pedido
 
 def get_pedido(db: Session, pedido_id: int):
-    db_pedido = get_cliente(db, pedido_id)
+    db_pedido = get_pedido(db, pedido_id)
     return db_pedido

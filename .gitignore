@@ -1,6 +1,7 @@
 # Archivos de configuración del entorno
 *.env
 *.env.*
+venv
 
 # Archivos de caché de Python
 __pycache__/

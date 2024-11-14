@@ -8,8 +8,8 @@ app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
 app.include_router(cliente.router)
-#app.include_router(prenda.router)
-#app.include_router(pedido.router)
+app.include_router(prenda.router)
+app.include_router(pedido.router)
 
 @app.get("/")
 def read_root():
