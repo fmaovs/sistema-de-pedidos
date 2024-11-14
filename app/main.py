@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.database import engine, Base
-from app.routers import cliente, prenda, pedido
+from .database import engine, Base
+from .routers import cliente, prenda, pedido
 
 app = FastAPI()
 
@@ -8,8 +8,8 @@ app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
 app.include_router(cliente.router)
-app.include_router(prenda.router)
-app.include_router(pedido.router)
+#app.include_router(prenda.router)
+#app.include_router(pedido.router)
 
 @app.get("/")
 def read_root():
